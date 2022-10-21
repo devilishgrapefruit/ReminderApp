@@ -17,20 +17,28 @@ class Reminder:
 
 
     def getData():
+
+        print("Для создания напоминания понадобится ввести данные.\n")
+
         Reminder.day, Reminder.month = input('Введите дату (в формате dd mm)\t').split()
         Reminder.day, Reminder.month = int(Reminder.day), int(Reminder.month)
         if Reminder.month > 12 or Reminder.day > 31:
             print("Некорректные данные")
             exit()
+    
         Reminder.hour, Reminder.minute = input('Введите время (В формате hh mi)\t').split()
         Reminder.hour, Reminder.minute = int(Reminder.hour), int(Reminder.minute)
         if Reminder.hour > 24 or Reminder.minute > 59:
             print("Некорректные данные")
             exit()
+        
         Reminder.name = str(input('Введите имя именинника\t'))
 
         Reminder.message = str(input('Введите примечание\t'))
 
+        print(f'\nНапоминае о дне рождении {Reminder.name}')
+        print(f'создано на {Reminder.hour:0>2}:{Reminder.minute:0>2} {Reminder.day:0>2}.{Reminder.month:0>2}')
+        print(f'Примечание: {Reminder.message}\n')
 
 
     def calculateTime(month, day, hour, minute):
@@ -45,6 +53,8 @@ class Reminder:
     def show_notify():
         pass
     
-
+    
     def notification():
-        pass
+
+        time.sleep(Reminder.tseconds)
+        Reminder.show_notify(f'\nНапоминае о дне рождении {Reminder.name}', f'Заметка: {Reminder.message}')
