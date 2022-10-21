@@ -1,8 +1,8 @@
 import unittest
 
+
 class Test_calculator(unittest.TestCase):
   
-
    #Тест-кейс на корректный расчет времени
     def test_correct_calc(self):
        pass

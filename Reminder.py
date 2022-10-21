@@ -1,8 +1,18 @@
+
+
+
 class Reminder:
 
     def __init__(self):
         
-        pass
+        self.month = 0
+        self. day = 0
+        self.hour = 0
+        self.minute = 0
+        self.name = ""
+        self.message = ""
+        tseconds = 0
+
 
     def getData():
 

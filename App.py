@@ -12,5 +12,6 @@ def main():
     else:
         print("Завершение работы")
 
+
 if __name__ == '__main__':
     main()
