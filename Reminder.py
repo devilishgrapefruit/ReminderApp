@@ -5,7 +5,14 @@ class Reminder:
         pass
 
     def getData():
+
+        print("Для создания напоминания понадобится ввести данные.\n")
+
+
+    def calculateTime(month, day, hour, minute):
+       
         pass
+
 
     def calculateTime():
        pass
