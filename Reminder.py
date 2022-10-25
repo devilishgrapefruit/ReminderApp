@@ -64,5 +64,5 @@ class Reminder:
 
     def notification():
 
-        time.sleep(Reminder.tseconds)
+        time.sleep(abs(Reminder.tseconds))
         Reminder.show_notify(f'\nНапоминае о дне рождении {Reminder.name}', f'Заметка: {Reminder.message}')
